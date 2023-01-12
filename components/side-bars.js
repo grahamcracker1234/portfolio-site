@@ -1,8 +1,8 @@
 import utilsStyles from '../styles/utils.module.scss';
-import styles from './socials-side-bar.module.scss';
+import styles from './side-bars.module.scss';
 import * as Icon from 'react-feather';
 
-export default function SocialsSideBar() {
+export default function SideBars() {
   return (
     <ul className={`${styles.listPseudo} flex flex-col absolute right-20 bottom-20 top-20 text-gray invisible lg:visible items-center`}>
       <li name="GitHub" className={`${styles.hover} py-2`}>

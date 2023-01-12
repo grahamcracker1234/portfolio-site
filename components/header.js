@@ -24,7 +24,7 @@ export default function Header() {
       <hr className={`${utilsStyles.gradient} h-2 md:max-w-lg sm:max-w-md max-w-xs w-full mb-7 rounded`}/>
       <p className="text-gray max-w-lg mb-10">Hello, stranger! I&apos;m a {getAge("2001/09/09")}-year-old developer who is passionate about competitive programming 🏆, game design 🎮, and software development 🧑‍💻.</p>
       <button className={utilsStyles.button}>Projects</button>
-      <Icon.ArrowDown className={`text-gray ${styles.arrow}`} size={48}/>
+      <Icon.ChevronDown className={`text-gray ${styles.arrow}`} size={48}/>
     </section>
   )
 }

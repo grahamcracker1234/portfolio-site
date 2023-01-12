@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Header from '../components/header';
-import SocialsSideBar from '../components/socials-side-bar';
+import SideBars from '../components/side-bars';
 
 export default function Home({ allPostsData }) {
   return (
@@ -8,8 +8,8 @@ export default function Home({ allPostsData }) {
       <Head>
         <title>Graham</title>
       </Head>
+      <SideBars/>
       <Header/>
-      <SocialsSideBar/>
     </>
   )
 }
