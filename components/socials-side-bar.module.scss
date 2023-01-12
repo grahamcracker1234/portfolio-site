@@ -1,0 +1,54 @@
+@use "../styles/utils.module";
+
+// .list {
+//   &::after,
+//   &::before {
+//     content: "";
+//     height: 100%;
+//     width: 0.1rem;
+//     @extend %gradient;
+//   }
+// }
+
+.listPseudo {
+  &::after,
+  &::before {
+    content: "";
+    height: 100%;
+    width: 0.1rem;
+    @extend %gradient;
+    @apply rounded;
+  }
+  &::after {
+    @apply mt-3;
+  }
+  &::before {
+    @apply mb-3;
+  }
+}
+
+.hover {
+  transition: color ease 200ms, filter linear 200ms;
+  background: transparent;
+
+  &::before {
+    content: attr(name);
+    position: absolute;
+    opacity: 0;
+    right: 100%;
+    transition: right ease 200ms, opacity linear 200ms;
+    // transition-property: opacity, right;
+    pointer-events: none;
+    background-clip: text;
+    @apply font-black;
+    // @extend %gradient;
+  }
+  &:hover {
+    @apply text-white;
+    @extend %drop-shadow;
+    &::before {
+      right: calc(100% + 1rem);
+      opacity: 1;
+    }
+  }
+}

@@ -1,21 +1,13 @@
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+@keyframes bob {
+  0% {
+    translate: 0% -15%;
+  }
+
+  100% {
+    translate: 0% 15%;
+  }
 }
 
-.gradient {
-	--gradient: linear-gradient(334deg, #6b97f7, #7525e2, #f7137e);
-	background: var(--gradient);
-	background-clip: text;
-	background-size: 180% 180%;
-	color: transparent;
-	animation: gradient 6s ease infinite;
-	// border-color: var(--gradient);
+.arrow {
+  animation: bob 1s ease-in-out infinite alternate;
 }
