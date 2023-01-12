@@ -16,13 +16,13 @@ function getAge(dateString) {
 
 export default function Header() {
   return (
-    <section className="lg:max-w-6xl container mx-auto lg:px-32 md:px-16 sm:px-8 xs:px-4 px-2 h-screen flex flex-col justify-center">
-      <h1 className="text-white font-black md:text-6xl sm:text-5xl xs:text-4xl text-3xl mb-2">
+    <section id="home" className="lg:max-w-xl lg:ml-auto min-[950px]:ml-40 min-[900px]:ml-30 min-[850px]:ml-20 md:ml-10 sm:max-w-md w-full mx-auto sm:px-4 xs:px-8 px-4 h-screen flex flex-col justify-center">
+      <h1 className="text-white font-black lg:text-6xl sm:text-5xl xs:text-4xl text-3xl mb-2">
         Hi 👋, I&apos;m <span className={`${utilsStyles.gradient} bg-clip-text `}>Graham</span>.
       </h1>
-      <h2 className="text-gray font-bold lg:text-4xl md:text-2xl sm:text-xl text-lg lg:mb-4 md:mb-3 mb-2">Developer, Designer, & Student</h2>
-      <hr className={`${utilsStyles.gradient} h-2 md:max-w-lg sm:max-w-md max-w-xs w-full mb-7 rounded`}/>
-      <p className="text-gray max-w-lg mb-10">Hello, stranger! I&apos;m a {getAge("2001/09/09")}-year-old developer who is passionate about competitive programming 🏆, game design 🎮, and software development 🧑‍💻.</p>
+      <h2 className="text-gray font-bold lg:text-4xl sm:text-xl text-lg lg:mb-4 mb-2">Developer, Designer, & Student</h2>
+      <hr className={`${utilsStyles.gradient} h-2 lg:max-w-lg sm:max-w-md max-w-xs w-full mb-7 rounded`}/>
+      <p className="text-gray lg:max-w-xl sm:max-w-lg max-w-md mb-10">Hello, stranger! I&apos;m a {getAge("2001/09/09")}-year-old developer who is passionate about competitive programming 🏆, game design 🎮, and software development 🧑‍💻.</p>
       <button className={utilsStyles.button}>Projects</button>
       <Icon.ChevronDown className={`text-gray ${styles.arrow}`} size={48}/>
     </section>

@@ -1,30 +1,47 @@
 import utilsStyles from '../styles/utils.module.scss';
 import styles from './side-bars.module.scss';
 import * as Icon from 'react-feather';
+import Link from 'next/link';
 
 export default function SideBars() {
   return (
-    <ul className={`${styles.listPseudo} flex flex-col absolute right-20 bottom-20 top-20 text-gray invisible lg:visible items-center`}>
-      <li name="GitHub" className={`${styles.hover} py-2`}>
-        <a target="_blank" rel="noopener noreferrer" href="https://github.com/grahamcracker1234">
-          <Icon.GitHub/>
-        </a>
-      </li>
-      <li name="LinkedIn" className={`${styles.hover} py-2`}>
-        <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/grahampreston1234/">
-          <Icon.Linkedin/>
-        </a>
-      </li>
-      <li name="Twitter" className={`${styles.hover} py-2`}>
-        <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/grahamcracker9_/">
-          <Icon.Twitter/>
-        </a>
-      </li>
-      <li name="Email" className={`${styles.hover} py-2`}>
-        <a target="_blank" rel="noopener noreferrer" href="mailto:g.b.preston@proton.me">
-          <Icon.Mail/>
-        </a>
-      </li>
-    </ul>
+    <>
+      <ul className={`${styles.listPseudo} ${styles.rightBar}`}>
+        <li>
+          <Link href="#home" name="Home" className={`${styles.hover} py-2 block`}><Icon.Home/></Link>
+        </li>
+        <li>
+          <Link href="#about" name="About" className={`${styles.hover} py-2 block`}><Icon.User/></Link>
+        </li>
+        <li>
+          <Link href="#projects" name="Projects" className={`${styles.hover} py-2 block`}><Icon.Folder/></Link>
+        </li>
+        <li>
+          <Link href="#contact" name="Contact" className={`${styles.hover} py-2 block`}><Icon.Share2/></Link>
+        </li>
+      </ul>
+      <ul className={`${styles.listPseudo} ${styles.leftBar}`}>
+        <li>
+          <a target="_blank" name="GitHub" rel="noopener noreferrer" href="https://github.com/grahamcracker1234" className={`${styles.hover} py-2 block`}>
+            <Icon.GitHub/>
+          </a>
+        </li>
+        <li>
+          <a target="_blank" name="LinkedIn" rel="noopener noreferrer" href="https://www.linkedin.com/in/grahampreston1234/" className={`${styles.hover} py-2 block`}>
+            <Icon.Linkedin/>
+          </a>
+        </li>
+        <li>
+          <a target="_blank" name="Twitter" rel="noopener noreferrer" href="https://twitter.com/grahamcracker9_/" className={`${styles.hover} py-2 block`}>
+            <Icon.Twitter/>
+          </a>
+        </li>
+        <li>
+          <a target="_blank" name="Email" rel="noopener noreferrer" href="mailto:g.b.preston@proton.me" className={`${styles.hover} py-2 block`}>
+            <Icon.Mail/>
+          </a>
+        </li>
+      </ul>
+    </>
   )
 }
