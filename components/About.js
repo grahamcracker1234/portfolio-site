@@ -12,7 +12,7 @@ export default function About() {
         <p className="text-gray 2xl:leading-7 2xl:text-base xl:leading-6 xl:text-sm text-xs leading-5">
           Hello, stranger! My humble beginnings to programming began in 2013 with the high-level block-based visual programming language, <b>Scratch</b>. Eventually, after becoming quite popular on Scratch, I decided to move onto a <em>real</em> textual language and began learning <b>JavaScript</b> on <b>Khan Academy</b>.
           <br className="mb-4"/>
-          Ever since then, I had been obsessed with computers, technology, and programming. Fast-forward to today, I have nearly <b>{getAge("2013/07/01")} years</b> of personal experience, and, in the pursuit of knowledge, I am attending <b>Mount St. Mary&apos;s University</b> studying Computer Science, Mathematics, Cybersecurity, and French. 
+          Ever since then, I had been obsessed with computers, technology, and programming. Fast-forward to today, I have <b>{getAge("2013/07/01")} years</b> of personal experience, and, in the pursuit of knowledge, I am attending <b>Mount St. Mary&apos;s University</b> studying Computer Science, Mathematics, Cybersecurity, and French. 
           <br className="mb-4"/>
           My main focus these days is building fun and interesting products and digital experiences for both others and myself to enjoy.
         </p>
