@@ -2,7 +2,6 @@ import utilsStyles from '../styles/utils.module.scss';
 import styles from './header.module.scss';
 import * as Icon from 'react-feather';
 
-
 function getAge(dateString) {
   var today = new Date();
   var birthDate = new Date(dateString);
