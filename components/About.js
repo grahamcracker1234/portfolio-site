@@ -17,7 +17,7 @@ export default function About() {
           My main focus these days is building fun and interesting products and digital experiences for both others and myself to enjoy.
         </p>
         <div className={`${styles.profile} relative 2xl:w-72 2xl:h-72 xl:w-60 xl:h-60 lg:w-52 lg:h-52 w-64 h-64 aspect-square`}>
-          <Image src="/images/profile.png" alt="profile picture" fill="true" className={styles.profileImg}></Image>
+          <Image src="/images/profile.png" alt="profile picture" fill={true} className={styles.profileImg}></Image>
           <svg height="0" width="0" version="1.1" xmlns="http://www.w3.org/2000/svg">
             <defs>
             <clipPath id="squircle" clipPathUnits="objectBoundingBox">
