@@ -9,7 +9,7 @@ export default function About() {
       <hr className={`${utilsStyles.gradient} h-[0.1rem] lg:max-w-lg sm:max-w-md max-w-xs w-full mb-7 rounded`}/>
       <div className="flex items-center xl:gap-8 lg:gap-4 gap-8 lg:flex-row flex-col">
         <p className="text-gray text-sm leading-6">
-          Hello, stranger! My humble beginnings to programming began in 2013 with the high-level block-based visual programming language Scratch. Eventually, after becoming quite popular on Scratch, I decided to move onto a &quot;real&quot;, textual language, and began learning JavaScript on Khan Academy.
+          Hello, stranger! My humble beginnings to programming began in 2013 with the high-level block-based visual programming language, Scratch. Eventually, after becoming quite popular on Scratch, I decided to move onto a &quot;real&quot; textual language and began learning JavaScript on Khan Academy.
           <br className="mb-4"/>
           Ever since then, I had been obsessed with computers, technology, and programming. Fast-forward to today, I am a student attending Mount St. Mary&apos;s University studying Computer Science, Mathematics, Cybersecurity, and French. 
           <br className="mb-4"/>
