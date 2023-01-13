@@ -4,10 +4,10 @@ import Image from 'next/image';
 
 export default function About() {
   return (
-    <section id="about" className="2xl:max-w-4xl xl:max-w-2xl lg:max-w-xl lg:ml-auto min-[950px]:ml-40 min-[900px]:ml-30 min-[850px]:ml-20 md:ml-10 sm:max-w-md mx-auto w-full py-8 flex flex-col justify-center">
-      <h2 className="text-white font-bold lg:text-4xl sm:text-xl text-lg lg:mb-4 mb-2">About me 🧑‍💻</h2>
+    <section id="about" className="2xl:max-w-4xl xl:max-w-2xl lg:max-w-xl lg:ml-auto min-[950px]:ml-40 min-[900px]:ml-30 min-[850px]:ml-20 md:ml-10 sm:max-w-md mx-auto w-full p-8 flex flex-col justify-center">
+      <h2 className="text-white font-bold lg:text-4xl text-2xl lg:mb-4 mb-2">About me 🧑‍💻</h2>
       <hr className={`${utilsStyles.gradient} h-[0.1rem] lg:max-w-lg sm:max-w-md max-w-xs w-full mb-7 rounded`}/>
-      <div className="flex items-center gap-8">
+      <div className="flex items-center xl:gap-8 lg:gap-4 gap-8 lg:flex-row flex-col">
         <p className="text-gray text-sm leading-6">
           Hello, stranger! My humble beginnings to programming began in 2013 with the high-level block-based visual programming language Scratch. Eventually, after becoming quite popular on Scratch, I decided to move onto a &quot;real&quot;, textual language, and began learning JavaScript on Khan Academy.
           <br className="mb-4"/>
@@ -15,7 +15,7 @@ export default function About() {
           <br className="mb-4"/>
           My main focus these days is building fun and interesting products and digital experiences for myself and others to enjoy.
         </p>
-        <div className={`${styles.profile} relative w-72 h-72 aspect-square`}>
+        <div className={`${styles.profile} relative 2xl:w-72 2xl:h-72 xl:w-60 xl:h-60 lg:w-52 lg:h-52 w-64 h-64 aspect-square`}>
           <Image src="/images/profile.png" alt="profile picture" fill="true" className={styles.profileImg}></Image>
           <svg height="0" width="0" version="1.1" xmlns="http://www.w3.org/2000/svg">
             <defs>
