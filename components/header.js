@@ -1,17 +1,7 @@
 import utilsStyles from '../styles/utils.module.scss';
-import styles from './header.module.scss';
+import styles from './Header.module.scss';
 import * as Icon from 'react-feather';
-
-function getAge(dateString) {
-  var today = new Date();
-  var birthDate = new Date(dateString);
-  var age = today.getFullYear() - birthDate.getFullYear();
-  var m = today.getMonth() - birthDate.getMonth();
-  if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
-    age--;
-  }
-  return age;
-}
+import getAge from '../lib/getAge';
 
 export default function Header() {
   return (
