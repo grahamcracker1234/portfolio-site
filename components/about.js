@@ -1,4 +1,4 @@
-import styles from './about.module.scss';
+import styles from './About.module.scss';
 import utilsStyles from '../styles/utils.module.scss';
 import Image from 'next/image';
 

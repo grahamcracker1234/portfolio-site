@@ -1,7 +1,7 @@
 import Head from 'next/head';
-import SideBars from '../components/side-bars';
-import Header from '../components/header';
-import About from '../components/about';
+import SideBars from '../components/SideBars';
+import Header from '../components/Header';
+import About from '../components/About';
 
 export default function Home({ allPostsData }) {
   return (
