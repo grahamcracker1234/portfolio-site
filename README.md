@@ -1,5 +1,7 @@
 # Personal Portfolio Site
 
+![Site Homepage](/public/images/portfolio-site.png)
+
 My personal site [grahamcracker.dev](https://www.grahamcracker.dev), acting as my digital portfolio and archive for all my projects.
 
 ## Technologies
