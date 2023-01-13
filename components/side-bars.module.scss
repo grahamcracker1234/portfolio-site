@@ -33,6 +33,7 @@
 }
 
 .listPseudo {
+  position: fixed;
   &::after,
   &::before {
     content: "";

@@ -8,16 +8,16 @@ export default function SideBars() {
     <>
       <ul className={`${styles.listPseudo} ${styles.rightBar}`}>
         <li>
-          <Link href="#home" name="Home" className={`${styles.hover} py-2 block`}><Icon.Home/></Link>
+          <a href="#home" name="Home" className={`${styles.hover} py-2 block`}><Icon.Home/></a>
         </li>
         <li>
-          <Link href="#about" name="About" className={`${styles.hover} py-2 block`}><Icon.User/></Link>
+          <a href="#about" name="About" className={`${styles.hover} py-2 block`}><Icon.User/></a>
         </li>
         <li>
-          <Link href="#projects" name="Projects" className={`${styles.hover} py-2 block`}><Icon.Folder/></Link>
+          <a href="#projects" name="Projects" className={`${styles.hover} py-2 block`}><Icon.Folder/></a>
         </li>
         <li>
-          <Link href="#contact" name="Contact" className={`${styles.hover} py-2 block`}><Icon.Share2/></Link>
+          <a href="#contact" name="Contact" className={`${styles.hover} py-2 block`}><Icon.Share2/></a>
         </li>
       </ul>
       <ul className={`${styles.listPseudo} ${styles.leftBar}`}>
@@ -43,5 +43,5 @@ export default function SideBars() {
         </li>
       </ul>
     </>
-  )
+  );
 }
