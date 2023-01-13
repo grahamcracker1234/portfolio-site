@@ -6,6 +6,7 @@ My personal site [grahamcracker.dev](https://www.grahamcracker.dev), acting as m
 * HTML: markup language
 * CSS: markup styling
 * JavaScript: programming language
+* Node.js: JavaScript runtime
 * npm/pnpm: package manager
 * React: front-end, component-based framework
 * JSX: syntax extension to JavaScript for React
