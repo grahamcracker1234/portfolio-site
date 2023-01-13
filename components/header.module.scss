@@ -9,5 +9,74 @@
 }
 
 .arrow {
-  animation: bob 1s ease-in-out infinite alternate;
+  animation: 1s ease-in-out infinite alternate bob;
+}
+
+// .wave {
+//   display: inline-block;
+//   transform-origin: 70% 70%;
+//   animation: 3s 5s infinite wave;
+// }
+
+// @keyframes wave {
+//   0% {
+//     transform: rotate(0deg);
+//   }
+//   10% {
+//     transform: rotate(14deg);
+//   }
+//   20% {
+//     transform: rotate(-8deg);
+//   }
+//   30% {
+//     transform: rotate(14deg);
+//   }
+//   40% {
+//     transform: rotate(-4deg);
+//   }
+//   50% {
+//     transform: rotate(10deg);
+//   }
+//   60% {
+//     transform: rotate(0deg);
+//   }
+//   100% {
+//     transform: rotate(0deg);
+//   }
+// }
+
+.wave {
+  display: inline-block;
+  transform-origin: 70% 70%;
+  animation: 6s infinite wave;
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  55% {
+    transform: rotate(14deg);
+  }
+  60% {
+    transform: rotate(-8deg);
+  }
+  65% {
+    transform: rotate(14deg);
+  }
+  70% {
+    transform: rotate(-4deg);
+  }
+  75% {
+    transform: rotate(10deg);
+  }
+  80% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
