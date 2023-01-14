@@ -1,5 +1,5 @@
 import utilsStyles from '../styles/utils.module.scss';
-import styles from './side-bars.module.scss';
+import styles from './SideBars.module.scss';
 import * as Icon from 'react-feather';
 import Link from 'next/link';
 
@@ -22,24 +22,24 @@ export default function SideBars() {
       </ul>
       <ul className={`${styles.listPseudo} ${styles.leftBar}`}>
         <li>
-          <a target="_blank" name="GitHub" rel="noopener noreferrer" href="https://github.com/grahamcracker1234" className={`${styles.hover} py-2 block`}>
+          <Link target="_blank" name="GitHub" rel="noopener noreferrer" href="https://github.com/grahamcracker1234" className={`${styles.hover} py-2 block`}>
             <Icon.GitHub/>
-          </a>
+          </Link>
         </li>
         <li>
-          <a target="_blank" name="LinkedIn" rel="noopener noreferrer" href="https://www.linkedin.com/in/grahampreston1234/" className={`${styles.hover} py-2 block`}>
+          <Link target="_blank" name="LinkedIn" rel="noopener noreferrer" href="https://www.linkedin.com/in/grahampreston1234/" className={`${styles.hover} py-2 block`}>
             <Icon.Linkedin/>
-          </a>
+          </Link>
         </li>
         <li>
-          <a target="_blank" name="Twitter" rel="noopener noreferrer" href="https://twitter.com/grahamcracker9_/" className={`${styles.hover} py-2 block`}>
+          <Link target="_blank" name="Twitter" rel="noopener noreferrer" href="https://twitter.com/grahamcracker9_/" className={`${styles.hover} py-2 block`}>
             <Icon.Twitter/>
-          </a>
+          </Link>
         </li>
         <li>
-          <a target="_blank" name="Email" rel="noopener noreferrer" href="mailto:g.b.preston@proton.me" className={`${styles.hover} py-2 block`}>
+          <Link target="_blank" name="Email" rel="noopener noreferrer" href="mailto:g.b.preston@proton.me" className={`${styles.hover} py-2 block`}>
             <Icon.Mail/>
-          </a>
+          </Link>
         </li>
       </ul>
     </>
