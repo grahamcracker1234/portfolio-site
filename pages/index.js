@@ -13,11 +13,13 @@ export default function Home({ allPostsData }) {
         <title>Grahamcracker</title>
       </Head>
       <SideBars/>
-      <Header/>
-      <About/>
-      <Projects/>
-      <Contact/>
-      <Footer/>
+      <main id="main">
+        <Header/>
+        <About/>
+        <Projects/>
+        <Contact/>
+        <Footer/>
+      </main>
     </>
   )
 }
