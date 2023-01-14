@@ -2,6 +2,7 @@ import utilsStyles from '../styles/utils.module.scss';
 import styles from './Header.module.scss';
 import * as Icon from 'react-feather';
 import getAge from '../lib/getAge';
+import Button from './Button';
 
 export default function Header() {
   return (
@@ -13,7 +14,7 @@ export default function Header() {
         <h2 className="text-gray font-bold lg:text-4xl sm:text-xl text-lg lg:mb-4 mb-2">Developer. Designer. Student.</h2>
         <hr className={`${utilsStyles.gradient} h-[0.1rem] lg:max-w-lg sm:max-w-md max-w-xs w-full mb-7 rounded`}/>
         <p className="text-gray lg:max-w-xl sm:max-w-lg max-w-md mb-10">A {getAge("2001/09/09")}-year-old developer who is passionate about competitive programming 🏆, game design 🎮, and software development 💻.</p>
-        <button className={utilsStyles.button}>Featured Projects</button>
+        <Button text="View Featured Projects" href="#projects"/>
       </div>
       <Icon.ChevronDown className={`text-gray ${styles.arrow}`} size={48}/>
     </section>
