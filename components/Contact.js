@@ -7,6 +7,7 @@ export default function Contact() {
     <section id="contact" className="2xl:max-w-4xl xl:max-w-2xl lg:max-w-xl lg:ml-auto min-[950px]:ml-40 min-[900px]:ml-30 min-[850px]:ml-20 md:ml-10 sm:max-w-md mx-auto w-full p-8 flex flex-col justify-center mb-20">
       <h2 className="text-white font-bold lg:text-4xl text-2xl lg:mb-4 mb-2">Contact me 🤙😄</h2>
       <hr className={`${utilsStyles.gradient} h-[0.1rem] 2xl:max-w-sm max-w-xs w-full mb-7 rounded`}/>
+      <p className="text-gray mb-6 sm:text-base text-xs">I&apos;m always looking for new opportunities, so my inbox is always open. Whether you have a question or just want to say hi, I&apos;ll try my best to get back to you!</p>
       <ul className="text-gray">
         <li>
           <Link target="_blank" name="GitHub" rel="noopener noreferrer" href="https://github.com/grahamcracker1234" className="py-2 flex gap-2 items-center justify-between sm:text-base text-sm !no-underline hover:drop-shadow-[0_0_2rem_rgba(0,0,0,1)] hover:text-white">
@@ -45,7 +46,7 @@ export default function Contact() {
               <span className="min-[355px]:inline-block hidden">Email</span>
             </span>
             <hr className="pointer-events-none w-full mx-3 rounded border-t-dark-gray border-2 border-dashed text-transparent xs:inline-block hidden"/>
-            <span className="before:content-['@'] before:text-dark-gray before:mr-1">g.b.preston@proton.me</span>
+            <span>g.b.preston@proton.me</span>
           </Link>
         </li>
       </ul>
