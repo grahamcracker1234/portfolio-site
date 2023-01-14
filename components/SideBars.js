@@ -4,41 +4,9 @@ import * as Icon from 'react-feather';
 import Link from 'next/link';
 import React, { useState, useEffect, useRef } from 'react';
 
-export default function SideBars({ containerRef }) {
-  // const menuOverlay = useRef(null);
-  // const menuBackground = useRef(null);
-  // const menuButton = useRef(null);
-  // const menu = useRef(null);
-
-  const [menuIsActive, setMenuIsActive] = useState(false);
-
+export default function SideBars({ state: [menuIsActive, setMenuIsActive] }) {
   const menuClick = () => setMenuIsActive(true);
   const menuExit = () => setMenuIsActive(false);
-
-  const format = () => {
-    containerRef.current.style.transition = "filter 200ms ease";
-    setTimeout(() => {
-      containerRef.current.style.transition = null;
-    }, 200);
-    
-    if (menuIsActive) {
-      // menu.current.style.transform = "none";
-      // menuOverlay.current.style.opacity = "15%";
-      // menuOverlay.current.style.pointerEvents = "all";
-      // menuBackground.current.style.transform = "none";
-      // menuBackground.current.style.filter = null;
-      containerRef.current.style.filter = "blur(12px)";
-    } else {
-      // menu.current.style.transform = null;
-      // menuOverlay.current.style.opacity = "0";
-      // menuOverlay.current.style.pointerEvents = null;
-      // menuBackground.current.style.transform = null;
-      // menuBackground.current.style.filter = "none";
-      containerRef.current.style.filter = null;
-    }
-  }
-
-  useEffect(format);
 
   return (
     <>

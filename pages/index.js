@@ -5,18 +5,18 @@ import About from '../components/About';
 import Projects from '../components/Projects';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
-import React, { useRef } from 'react';
+import React, { useState } from 'react';
 
 export default function Home({ allPostsData }) {
-  const containerRef = useRef(null);
+  const [menuIsActive, setMenuIsActive] = useState(false);
 
   return (
     <>
       <Head>
         <title>Grahamcracker</title>
       </Head>
-      <SideBars containerRef={containerRef}/>
-      <main ref={containerRef}>
+      <SideBars state={[menuIsActive, setMenuIsActive]}/>
+      <main className={`${menuIsActive && "blur-md"} filter 200ms ease`}>
         <Header/>
         <About/>
         <Projects/>
