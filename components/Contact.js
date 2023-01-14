@@ -40,8 +40,8 @@ export default function Contact() {
           </Link>
         </li>
         <li>
-          <Link target="_blank" name="Email" rel="noopener noreferrer" href="mailto:g.b.preston@proton.me" className="py-2 flex gap-2 items-center justify-between sm:text-base text-sm !no-underline">
-            <span className="inline-flex gap-2 hover:drop-shadow-[0_0_2rem_rgba(0,0,0,1)] hover:text-white">
+          <Link target="_blank" name="Email" rel="noopener noreferrer" href="mailto:g.b.preston@proton.me" className="py-2 flex gap-2 items-center justify-between sm:text-base text-sm !no-underline  hover:drop-shadow-[0_0_2rem_rgba(0,0,0,1)] hover:text-white">
+            <span className="inline-flex gap-2">
               <Icon.Mail className="w-6"/>
               <span className="min-[355px]:inline-block hidden">Email</span>
             </span>
