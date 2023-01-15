@@ -1,0 +1,15 @@
+@keyframes loop {
+	0% {
+		transform: translateX(0%);
+	}
+
+	100% {
+		transform: translateX(-50%);
+	}
+}
+
+.loop {
+	animation: 30s linear infinite loop;
+	animation-duration: var(--duration);
+	animation-direction: var(--direction);
+}

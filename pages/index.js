@@ -5,6 +5,7 @@ import About from '../components/About';
 import Projects from '../components/Projects';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
+import Skills from '../components/Skills';
 import React, { useState } from 'react';
 
 export default function Home({ allPostsData }) {
@@ -19,6 +20,7 @@ export default function Home({ allPostsData }) {
       <main className={`${menuIsActive && "blur-md"} filter 200ms ease`}>
         <Header/>
         <About/>
+        <Skills rows={5}/>
         <Projects/>
         <Contact/>
         <Footer/>
