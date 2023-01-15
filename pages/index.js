@@ -5,19 +5,24 @@ import About from '../components/About';
 import Projects from '../components/Projects';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
+import React, { useState } from 'react';
 
 export default function Home({ allPostsData }) {
+  const [menuIsActive, setMenuIsActive] = useState(false);
+
   return (
     <>
       <Head>
         <title>Grahamcracker</title>
       </Head>
-      <SideBars/>
-      <Header/>
-      <About/>
-      <Projects/>
-      <Contact/>
-      <Footer/>
+      <SideBars state={[menuIsActive, setMenuIsActive]}/>
+      <main className={`${menuIsActive && "blur-md"} filter 200ms ease`}>
+        <Header/>
+        <About/>
+        <Projects/>
+        <Contact/>
+        <Footer/>
+      </main>
     </>
   )
 }

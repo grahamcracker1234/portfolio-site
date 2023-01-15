@@ -2,22 +2,35 @@ import utilsStyles from '../styles/utils.module.scss';
 import styles from './SideBars.module.scss';
 import * as Icon from 'react-feather';
 import Link from 'next/link';
+import React, { useState, useEffect, useRef } from 'react';
 
-export default function SideBars() {
+export default function SideBars({ state: [menuIsActive, setMenuIsActive] }) {
+  const menuClick = () => setMenuIsActive(true);
+  const menuExit = () => setMenuIsActive(false);
+
   return (
     <>
-      <ul className={`${styles.listPseudo} ${styles.rightBar}`}>
+      <button onClick={menuClick} className="md:pointer-events-none md:hidden z-20 fixed top-0 right-0 m-6 p-2 hover:text-white text-gray bg-evening rounded drop-shadow-[0_0.1rem_0.1rem_rgba(0,0,0,0.75)]">
+        <Icon.Menu/>
+      </button>
+      <div onClick={menuExit} className={`${menuIsActive ? "opacity-20 pointer-events-auto" : "opacity-0 pointer-events-none"} z-10 fixed top-0 bottom-0 right-0 left-0 bg-black transition-opacity`}></div>
+      <div className={`${menuIsActive ? "transform-none drop-shadow-[0.5rem_0_1rem_rgba(0,0,0,1)]" : "transform-gpu translate-x-[100%]"} md:pointer-events-none md:hidden z-20 fixed top-0 bottom-0 right-0 w-48 bg-midnight transition-[transform,filter] `}>
+        <button onClick={menuExit} className="relative top-0 left-0 m-4 hover:text-white text-gray rounded drop-shadow-[0_0.1rem_0.1rem_rgba(0,0,0,0.75)]">
+          <Icon.X/>
+        </button>
+      </div>
+      <ul className={`z-20 ${styles.listPseudo} ${styles.rightBar} ${menuIsActive ? "transform-none" : "max-[767px]:translate-x-[12.5rem]"} max-[767px]:!visible max-[767px]:transition-transform`}>
         <li>
-          <a href="#home" name="Home" className={`${styles.hover} py-2 block`}><Icon.Home/></a>
+          <a href="#home" name="Home" onClick={menuExit} className={`${styles.hover} py-2 block`}><Icon.Home/></a>
         </li>
         <li>
-          <a href="#about" name="About" className={`${styles.hover} py-2 block`}><Icon.User/></a>
+          <a href="#about" name="About" onClick={menuExit} className={`${styles.hover} py-2 block`}><Icon.User/></a>
         </li>
         <li>
-          <a href="#projects" name="Projects" className={`${styles.hover} py-2 block`}><Icon.Folder/></a>
+          <a href="#projects" name="Projects" onClick={menuExit} className={`${styles.hover} py-2 block`}><Icon.Folder/></a>
         </li>
         <li>
-          <a href="#contact" name="Contact" className={`${styles.hover} py-2 block`}><Icon.Share2/></a>
+          <a href="#contact" name="Contact" onClick={menuExit} className={`${styles.hover} py-2 block`}><Icon.Share2/></a>
         </li>
       </ul>
       <ul className={`${styles.listPseudo} ${styles.leftBar}`}>
