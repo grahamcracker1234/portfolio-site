@@ -2,7 +2,7 @@
 
 ![Site Homepage](/public/images/portfolio-site.png)
 
-My personal site [grahamcracker.dev](https://www.grahamcracker.dev), acting as my digital portfolio and an archive for all my projects.
+This is my personal site, [grahamcracker.dev](https://www.grahamcracker.dev), which acts as a digital portfolio and an archive for all my projects.
 
 ## Technologies
 * HTML: markup language
