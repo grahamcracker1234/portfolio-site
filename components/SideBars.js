@@ -27,7 +27,6 @@ export default function SideBars({ state: [menuIsActive, setMenuIsActive] }) {
           <a href="#about" name="About" onClick={menuExit} className={`${styles.hover} py-2 block`}><Icon.User/></a>
         </li>
         <li>
-          {/* <a href="#skills" name="Skills" onClick={menuExit} className={`${styles.hover} py-2 block`}><Icon.Award/></a> */}
           <a href="#skills" name="Skills" onClick={menuExit} className={`${styles.hover} py-2 block`}><Icon.Tool/></a>
         </li>
         <li>
