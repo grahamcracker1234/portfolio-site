@@ -16,7 +16,7 @@ export default function Header() {
         <p className="text-gray lg:max-w-xl sm:max-w-lg max-w-md mb-10">A {getAge("2001/09/09")}-year-old developer who is passionate about competitive programming 🏆, game design 🎮, and software development 💻.</p>
         <Button text="View Featured Projects" href="#projects"/>
       </div>
-      <a href="#about" className="hover:text-white max-w-min"><Icon.ChevronDown className={`text-gray ${styles.arrow}`} size={48}/></a>
+      <a href="#about" className="max-w-min"><Icon.ChevronDown className={`hover:text-white text-gray ${styles.arrow}`} size={48}/></a>
     </section>
   );
 }
