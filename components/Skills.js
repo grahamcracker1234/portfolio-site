@@ -41,7 +41,7 @@ function SkillLine({ skills, flip, duration, durationFactor }) {
 }
 
 export default function Skills({ rows }) {
-  const [skills, setSkills] = useState(shuffle(["Bash", "C#", "CSS", "HTML", "iOS-Development", "Java", "JavaScript", "Node.js", "npm", "PHP", "Python", "R", "Ruby", "Rust", "Sass", "SQL", "Swift", "TypeScript", "Front-End", "Back-End", "Full-Stack", "XML", "Web-Development", "Linux", "macOS", "Microsoft-Excel", "Microsoft-Powerpoint", "Microsoft-Word", "Unity", "Visual-Studio-Code", "Windows", "Xcode", "Next.js", "React", "Tailwind", "Git", "pnpm", "GitHub", "Game-Design", "Search-Engine-Optimization", "User-Experience-Design", "User-Interface-Design", "Adobe-After-Effects", "Adobe-Illustrator", "Adobe-Photoshop", "Adobe-Premier-Pro", "Vercel"]));
+  const [skills, setSkills] = useState(shuffle(["Bash", "C#", "CSS", "HTML", "iOS-Development", "Java", "JavaScript", "Node.js", "npm", "PHP", "Python", "R", "Ruby", "Rust", "Sass", "SQL", "Swift", "TypeScript", "Front-End", "Back-End", "Full-Stack", "XML", "Web-Development", "Linux", "macOS", "Microsoft-Excel", "Microsoft-Powerpoint", "Microsoft-Word", "Unity", "Visual-Studio-Code", "Windows", "Xcode", "Next.js", "React", "Tailwind", "Git", "pnpm", "GitHub", "Game-Design", "Search-Engine-Optimization", "User-Experience-Design", "User-Interface-Design", "Adobe-After-Effects", "Adobe-Illustrator", "Adobe-Photoshop", "Adobe-Premier-Pro", "Vercel", "pandas", "NumPy"]));
   const maxChunkSize = Math.ceil(skills.length / rows);
   const chunks = chunk(skills, maxChunkSize);
 
@@ -53,6 +53,7 @@ export default function Skills({ rows }) {
     <section id="skills" className="2xl:max-w-4xl xl:max-w-2xl lg:max-w-xl lg:ml-auto min-[950px]:ml-40 min-[900px]:ml-30 min-[850px]:ml-20 md:ml-10 sm:max-w-md mx-auto w-full p-8 flex flex-col justify-center mb-20 overflow-x-hidden">
       <h2 className="text-white font-bold lg:text-4xl text-2xl lg:mb-4 mb-2">My skills 🛠️</h2>
         <hr className={`${utilsStyles.gradient} h-[0.1rem] 2xl:max-w-sm max-w-xs w-full mb-7 rounded`}/>
+
         <div className="mx-[-2rem] relative">
           {chunks.map((skills, i) => 
             <SkillLine key={i} skills={skills} durationFactor={randomNumber(0.85, 1.15)} flip={i % 2}/>
