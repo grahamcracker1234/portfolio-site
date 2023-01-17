@@ -17,7 +17,6 @@ function Project({ name, description, technologies, imageSrc, links, flip }) {
         {links && <div className={`${!flip && "xl:flex-row-reverse"} mt-4 flex gap-2 flex-wrap`}>{links.map(({ Icon, href, name }) => 
           <Link className="transition-[filter_200ms_linear] hover:text-white xl:hover:drop-shadow-[0_0.5rem_1rem_rgba(0,0,0,0.5)] xl:drop-shadow-[0_0_1rem_rgba(0,0,0,0.1)] drop-shadow-[0_0_1rem_rgba(0,0,0,1)]" key={name} href={href} target="_blank" rel="noopener noreferrer"><Icon></Icon></Link>
         )}</div>}
-
       </div>
     </div>
   )
