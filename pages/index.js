@@ -8,6 +8,10 @@ import Footer from '../components/Footer';
 import Skills from '../components/Skills';
 import React, { useState } from 'react';
 
+function randomNumber(min, max) {
+  return Math.random() * (max - min) + min;
+}
+
 function shuffle(a) {
   for (let i = a.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -18,11 +22,13 @@ function shuffle(a) {
 
 export async function getStaticProps() {
   const skills = ["Bash", "C#", "CSS", "HTML", "iOS-Development", "Java", "JavaScript", "Node.js", "npm", "PHP", "Python", "R", "Ruby", "Rust", "Sass", "SQL", "Swift", "TypeScript", "Front-End", "Back-End", "Full-Stack", "XML", "Web-Development", "Linux", "macOS", "Microsoft-Excel", "Microsoft-Powerpoint", "Microsoft-Word", "Unity", "Visual-Studio-Code", "Windows", "Xcode", "Next.js", "React", "Tailwind", "Git", "pnpm", "GitHub", "Game-Design", "Search-Engine-Optimization", "User-Experience-Design", "User-Interface-Design", "Adobe-After-Effects", "Adobe-Illustrator", "Adobe-Photoshop", "Adobe-Premier-Pro", "Vercel", "pandas", "NumPy"];
+  const rows = 5;
+  const durationFactors = [...Array(rows)].map(_ => randomNumber(0.85, 1.15));
 
-  return await { props: { skills: shuffle(skills) } };
+  return await { props: { skills: shuffle(skills), rows, durationFactors } };
 }
 
-export default function Home({ skills }) {
+export default function Home({ skills, rows, durationFactors }) {
   const [menuIsActive, setMenuIsActive] = useState(false);
 
   return (
@@ -34,7 +40,7 @@ export default function Home({ skills }) {
       <main className={`${menuIsActive && "blur-md"} filter 200ms ease`}>
         <Header/>
         <About/>
-        <Skills rows={5} skills={skills}/>
+        <Skills skills={skills} rows={rows} durationFactors={durationFactors} />
         <Projects/>
         <Contact/>
         <Footer/>

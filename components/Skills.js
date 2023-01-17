@@ -1,10 +1,6 @@
 import utilsStyles from '../styles/utils.module.scss';
 import styles from './Skills.module.scss';
 
-function randomNumber(min, max) {
-  return Math.random() * (max - min) + min;
-}
-
 function chunk(array, limit) {
   const numChunks = Math.ceil(array.length / limit);
   return Array.from(
@@ -26,7 +22,7 @@ function SkillLine({ skills, flip, duration, durationFactor }) {
   );
 }
 
-export default function Skills({ rows, skills }) {
+export default function Skills({ rows, skills, durationFactors }) {
   const maxChunkSize = Math.ceil(skills.length / rows);
   const chunks = chunk(skills, maxChunkSize);
 
@@ -37,7 +33,7 @@ export default function Skills({ rows, skills }) {
 
         <div className="mx-[-2rem] relative">
           {chunks.map((skills, i) => 
-            <SkillLine key={i} skills={skills} durationFactor={randomNumber(0.85, 1.15)} flip={i % 2}/>
+            <SkillLine key={i} skills={skills} durationFactor={durationFactors[i]} flip={i % 2}/>
           )}
           <div className="absolute top-0 bottom-0 left-0 w-10 bg-[linear-gradient(90deg,#10101A,transparent_100%)] pointer-events-none"></div>
           <div className="absolute top-0 bottom-0 right-0 w-10 bg-[linear-gradient(90deg,transparent_0%,#10101A)] pointer-events-none"></div>
