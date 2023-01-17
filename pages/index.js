@@ -35,7 +35,7 @@ export default function Home({ skills, rows, durationFactors }) {
   return (
     <>
       <Head>
-        <title>Graham, a Developer&apos;s Portfolio</title>
+        <title>Graham B. Preston</title>
         <meta
           name="description"
           content={`A ${getAge("2001/09/09")}-year-old developer who is passionate about competitive programming 🏆, game design 🎮, and software development 💻.`}/>
