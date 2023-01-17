@@ -15,7 +15,7 @@ export default function About() {
           <span className="block">My main focus these days is building fun, interesting products and digital experiences for everyone to enjoy.</span>
         </p>
         <div className={`${styles.profile} relative 2xl:w-72 2xl:h-72 xl:w-60 xl:h-60 lg:w-52 lg:h-52 w-64 h-64 aspect-square`}>
-          <Image src="/images/profile.png" alt="profile picture" fill={true} className={styles.profileImg}></Image>
+          <Image src="/images/profile.png" alt="profile picture" fill={true} sizes="(min-width: 1536px) 324px, (min-width: 1280px) 270px, (min-width: 1024px) 234px, (min-width: 768px) 288px, (min-width: 640px) 288px, (min-width: 475px) 288px, 100vw" className={styles.profileImg} ></Image>
           <svg height="0" width="0" version="1.1" xmlns="http://www.w3.org/2000/svg">
             <defs>
             <clipPath id="squircle" clipPathUnits="objectBoundingBox">
