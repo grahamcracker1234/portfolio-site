@@ -2,7 +2,6 @@ import utilsStyles from '../styles/utils.module.scss';
 import styles from './SideBars.module.scss';
 import * as Icon from 'react-feather';
 import Link from 'next/link';
-import React, { useState, useEffect, useRef } from 'react';
 
 export default function SideBars({ state: [menuIsActive, setMenuIsActive] }) {
   const menuClick = () => setMenuIsActive(true);
