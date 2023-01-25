@@ -41,7 +41,7 @@ export default function Home({ skills, rows, durationFactors }) {
           content={`A ${getAge("2001/09/09")}-year-old developer who is passionate about competitive programming 🏆, game design 🎮, and software development 💻.`}/>
       </Head>
       <SideBars state={[menuIsActive, setMenuIsActive]}/>
-      <main className={`${menuIsActive && "blur-md"} filter 200ms ease`}>
+      <main className={`${menuIsActive && "blur-md"} transition-[filter]`}>
         <Header/>
         <About/>
         <Skills skills={skills} rows={rows} durationFactors={durationFactors} />

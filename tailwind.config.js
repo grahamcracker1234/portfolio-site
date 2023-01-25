@@ -25,8 +25,46 @@ module.exports = {
       ...defaultTheme.screens,
     },
     extend: {
-      
+      keyframes: {
+        loop: {
+          "0%": {
+            transform: "translateX(0%)"
+          },
+          "100%": {
+            transform: "translateX(-50%)"
+          }
+        },
+        wave: {
+          "0%": {
+            transform: "rotate(0deg)"
+          },
+          "50%": {
+            transform: "rotate(0deg)"
+          },
+          "55%": {
+            transform: "rotate(14deg)"
+          },
+          "60%": {
+            transform: "rotate(-8deg)"
+          },
+          "65%": {
+            transform: "rotate(14deg)"
+          },
+          "70%": {
+            transform: "rotate(-4deg)"
+          },
+          "75%": {
+            transform: "rotate(10deg)"
+          },
+          "80%": {
+            transform: "rotate(0deg)"
+          },
+          "100%": {
+            transform: "rotate(0deg)"
+          },
+        }
+      },
     },
-  },
-  plugins: [],
+    plugins: [],
+  }
 }
