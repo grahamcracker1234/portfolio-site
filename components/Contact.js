@@ -1,13 +1,10 @@
-import utilsStyles from '../styles/utils.module.scss';
 import Link from 'next/link';
 import * as Icon from 'react-feather';
+import Section from './Section';
 
 export default function Contact() {
   return (
-    // eslint-disable-next-line tailwindcss/no-custom-classname
-    <section id="contact" className="min-[900px]:ml-30 mx-auto mb-20 flex w-full flex-col justify-center p-8 sm:max-w-md md:ml-10 min-[850px]:ml-20 min-[950px]:ml-40 lg:ml-auto lg:max-w-xl xl:max-w-2xl 2xl:max-w-4xl">
-      <h2 className="mb-2 text-2xl font-bold text-white lg:mb-4 lg:text-4xl">Contact me 🤙😄</h2>
-      <hr className={`${utilsStyles.gradient} mb-7 h-[0.1rem] w-full max-w-xs rounded 2xl:max-w-sm`}/>
+    <Section id="contact" header="Contact me 🤙😄">
       <p className="mb-6 text-xs text-gray sm:text-base">I&apos;m always looking for new opportunities, so my inbox is always open. Whether you have a question or just want to say hi, I&apos;ll try my best to get back to you!</p>
       <ul className="text-gray">
         <li>
@@ -51,6 +48,6 @@ export default function Contact() {
           </Link>
         </li>
       </ul>
-    </section>
+    </Section>
   );
 }

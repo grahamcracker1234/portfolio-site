@@ -1,4 +1,4 @@
-import utilsStyles from '../styles/utils.module.scss';
+import Section from './Section';
 import * as Icon from 'react-feather';
 import Button from './Button';
 import Image from 'next/image';
@@ -24,10 +24,7 @@ function Project({ name, description, technologies, imageSrc, links, flip }) {
 
 export default function Projects() {
   return (
-    // eslint-disable-next-line tailwindcss/no-custom-classname
-    <section id="projects" className="min-[900px]:ml-30 mx-auto mb-20 flex w-full flex-col justify-center p-8 sm:max-w-md md:ml-10 min-[850px]:ml-20 min-[950px]:ml-40 lg:ml-auto lg:max-w-xl xl:max-w-2xl 2xl:max-w-4xl">
-      <h2 className="mb-2 text-2xl font-bold text-white lg:mb-4 lg:text-4xl">Featured projects 📁</h2>
-      <hr className={`${utilsStyles.gradient} mb-7 h-[0.1rem] w-full max-w-xs rounded 2xl:max-w-sm`}/>
+    <Section id="projects" header="Featured projects 📁">
       <div className="flex flex-col items-center gap-8">
         <Project name="Multidimensional Renderer" description="A simple computer graphics renderer to visualize any higher spatial dimension with an n-dimensional hypercube rotating about all possible degrees-of-freedom." technologies={["HTML", "CSS", "JavaScript", "Canvas", "Open-Source"]} imageSrc="/images/renderer.png" links={[{Icon: Icon.GitHub, href: "https://github.com/grahamcracker1234/multidimensional-renderer", name: "GitHub"}, {Icon: Icon.ExternalLink, href: "https://grahamcracker1234.github.io/multidimensional-renderer/", name: "Demo"}]}/>
         <Project name="ColorBlox!" description="A puzzle-esque, arcade-style game requiring high-speed pattern recognition. Try my free mobile game on the iOS App Store, featuring two different game modes each with three difficulties and a global leaderboard." technologies={["Swift", "iOS", "SpriteKit"]} imageSrc="/images/colorblox.png" links={[{Icon: Icon.ExternalLink, href: "https://apps.apple.com/us/app/colorblox/id1265656307", name: "App Store"}]} flip={true}/>
@@ -37,6 +34,6 @@ export default function Projects() {
           <span>More Projects</span>
         </Button>
       </div>
-    </section>
+    </Section>
   )
 }

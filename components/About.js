@@ -1,13 +1,10 @@
-import utilsStyles from '../styles/utils.module.scss';
+import Section from './Section';
 import Image from 'next/image';
 import getAge from '../lib/getAge';
 
 export default function About() {
   return (
-    // eslint-disable-next-line tailwindcss/no-custom-classname
-    <section id="about" className="min-[900px]:ml-30 mx-auto mb-20 flex w-full flex-col justify-center p-8 sm:max-w-md md:ml-10 min-[850px]:ml-20 min-[950px]:ml-40 lg:ml-auto lg:max-w-xl xl:max-w-2xl 2xl:max-w-4xl">
-      <h2 className="mb-2 text-2xl font-bold text-white lg:mb-4 lg:text-4xl">About me 🧑‍💻</h2>
-      <hr className={`${utilsStyles.gradient} mb-7 h-[0.1rem] w-full max-w-xs rounded 2xl:max-w-sm`}/>
+    <Section id="about" header="About me 🧑‍💻">
       <div className="flex flex-col items-center gap-8 lg:flex-row lg:gap-4 xl:gap-8">
         <p className="text-xs leading-5 text-gray xl:text-sm xl:leading-6 2xl:text-base 2xl:leading-7">
           <span className="mb-4 block">Hello, stranger! My humble beginnings to programming began in 2013 with the high-level block-based visual programming language, <b>Scratch</b>. Eventually, after becoming quite popular on Scratch, I decided to move onto a <em>real</em> textual language and began learning <b>JavaScript</b> on <b>Khan Academy</b>.</span>
@@ -30,6 +27,6 @@ export default function About() {
           </svg>
         </div>
       </div>
-    </section>
+    </Section>
   );
 }
