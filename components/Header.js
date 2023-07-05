@@ -1,7 +1,7 @@
-import utilsStyles from '../styles/utils.module.scss';
-import * as Icon from 'react-feather';
-import getAge from '../lib/getAge';
-import Button from './Button';
+import utilsStyles from "../styles/utils.module.scss";
+import * as Icon from "react-feather";
+import getAge from "../lib/getAge";
+import Button from "./Button";
 
 export default function Header() {
   return (
@@ -13,7 +13,7 @@ export default function Header() {
         </h1>
         <h2 className="mb-2 text-lg font-bold text-gray sm:text-xl lg:mb-4 lg:text-4xl">Developer. Designer. Student.</h2>
         <hr className={`${utilsStyles.gradient} mb-7 h-[0.1rem] w-full max-w-xs rounded sm:max-w-md lg:max-w-lg`}/>
-        <p className="mb-10 max-w-md text-gray sm:max-w-lg lg:max-w-xl">A {getAge("2001/09/09")}-year-old developer who is passionate about competitive programming 🏆, game design 🎮, and software development 💻.</p>
+        <p className="mb-10 max-w-md text-gray sm:max-w-lg lg:max-w-xl">A {getAge("2001-09-09")}-year-old developer who is passionate about competitive programming 🏆, game design 🎮, and software development 💻.</p>
         <Button href="#projects" className="flex flex-row gap-2">
           <Icon.Folder/>
           <span>View Featured Projects</span>

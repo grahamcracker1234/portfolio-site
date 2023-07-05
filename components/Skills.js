@@ -1,5 +1,5 @@
-import styles from './Skills.module.scss';
-import Section from './Section';
+import styles from "./Skills.module.scss";
+import Section from "./Section";
 
 function chunk(array, limit) {
   const numChunks = Math.ceil(array.length / limit);

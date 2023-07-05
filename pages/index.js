@@ -1,13 +1,13 @@
-import Head from 'next/head';
-import SideBars from '../components/SideBars';
-import Header from '../components/Header';
-import About from '../components/About';
-import Projects from '../components/Projects';
-import Contact from '../components/Contact';
-import Footer from '../components/Footer';
-import Skills from '../components/Skills';
-import getAge from '../lib/getAge';
-import React, { useState } from 'react';
+import Head from "next/head";
+import SideBars from "../components/SideBars";
+import Header from "../components/Header";
+import About from "../components/About";
+import Projects from "../components/Projects";
+import Contact from "../components/Contact";
+import Footer from "../components/Footer";
+import Skills from "../components/Skills";
+import getAge from "../lib/getAge";
+import React, { useState } from "react";
 
 function randomNumber(min, max) {
   return Math.random() * (max - min) + min;
@@ -38,7 +38,7 @@ export default function Home({ skills, rows, durationFactors }) {
         <title>Graham B. Preston</title>
         <meta
           name="description"
-          content={`A ${getAge("2001/09/09")}-year-old developer who is passionate about competitive programming 🏆, game design 🎮, and software development 💻.`}/>
+          content={`A ${getAge("2001-09-09")}-year-old developer who is passionate about competitive programming 🏆, game design 🎮, and software development 💻.`}/>
       </Head>
       <SideBars state={[menuIsActive, setMenuIsActive]}/>
       <main className={`${menuIsActive && "blur-md"} transition-[filter]`}>

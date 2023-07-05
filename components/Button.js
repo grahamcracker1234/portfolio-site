@@ -1,5 +1,5 @@
-import { Roboto_Condensed } from '@next/font/google';
-const roboto = Roboto_Condensed({ subsets: ['latin'], weight: '400' });
+import { Roboto_Condensed } from "@next/font/google";
+const roboto = Roboto_Condensed({ subsets: ["latin"], weight: "400" });
 
 export default function Button({ children, className, href, ...props }) {
   return (

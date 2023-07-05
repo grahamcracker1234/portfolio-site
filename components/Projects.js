@@ -1,8 +1,8 @@
-import Section from './Section';
-import * as Icon from 'react-feather';
-import Button from './Button';
-import Image from 'next/image';
-import Link from 'next/link';
+import Section from "./Section";
+import * as Icon from "react-feather";
+import Button from "./Button";
+import Image from "next/image";
+import Link from "next/link";
 
 function Project({ name, description, technologies, imageSrc, links, flip }) {
   return (
@@ -27,7 +27,7 @@ export default function Projects() {
     <Section id="projects" header="Featured projects 📁">
       <div className="flex flex-col items-center gap-8">
         <Project name="Multidimensional Renderer" description="A simple computer graphics renderer to visualize any higher spatial dimension with an n-dimensional hypercube rotating about all possible degrees-of-freedom." technologies={["HTML", "CSS", "JavaScript", "Canvas", "Open-Source"]} imageSrc="/images/renderer.png" links={[{Icon: Icon.GitHub, href: "https://github.com/grahamcracker1234/multidimensional-renderer", name: "GitHub"}, {Icon: Icon.ExternalLink, href: "https://grahamcracker1234.github.io/multidimensional-renderer/", name: "Demo"}]}/>
-        <Project name="ColorBlox!" description="A puzzle-esque, arcade-style game requiring high-speed pattern recognition. Try my free mobile game on the iOS App Store, featuring two different game modes each with three difficulties and a global leaderboard." technologies={["Swift", "iOS", "SpriteKit"]} imageSrc="/images/colorblox.png" links={[{Icon: Icon.ExternalLink, href: "https://apps.apple.com/us/app/colorblox/id1265656307", name: "App Store"}]} flip={true}/>
+        <Project name="ColorBlox!" description="A puzzle-esque, arcade-style game requiring high-speed pattern recognition. Try my free mobile game on the iOS App Store, featuring two different game modes each with three difficulties and global leaderboards." technologies={["Swift", "iOS", "SpriteKit"]} imageSrc="/images/colorblox.png" links={[{Icon: Icon.ExternalLink, href: "https://apps.apple.com/us/app/colorblox/id1265656307", name: "App Store"}]} flip={true}/>
         <Project name="Portfolio Site" description="This website, which you are currently viewing, acts as a digital portfolio and an archive for all my projects. It is open sourced, so feel free to look at it on GitHub." technologies={["HTML", "CSS", "JavaScript", "React", "Next.js", "Tailwind", "Vercel", "Open-Source"]} imageSrc="/images/portfolio-site.png" links={[{Icon: Icon.GitHub, href: "https://github.com/grahamcracker1234/portfolio-site", name: "GitHub"}]}/>
         <Button href="https://github.com/grahamcracker1234?tab=repositories" target="_blank" rel="noopener noreferrer" className="mx-auto flex flex-row gap-2">
           <Icon.ExternalLink/>

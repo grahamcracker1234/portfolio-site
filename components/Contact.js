@@ -1,6 +1,6 @@
-import Link from 'next/link';
-import * as Icon from 'react-feather';
-import Section from './Section';
+import Link from "next/link";
+import * as Icon from "react-feather";
+import Section from "./Section";
 
 export default function Contact() {
   return (

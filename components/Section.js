@@ -1,4 +1,4 @@
-import utilsStyles from '../styles/utils.module.scss';
+import utilsStyles from "../styles/utils.module.scss";
 
 export default function Section({ header, children }) {
   return (

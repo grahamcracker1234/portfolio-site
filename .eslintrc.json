@@ -10,6 +10,14 @@
       {
         "argsIgnorePattern": "^_"
       }
+    ],
+    "quotes": [
+      "error",
+      "double",
+      {
+        "avoidEscape": true,
+        "allowTemplateLiterals": true
+      }
     ]
   },
   "plugins": [
