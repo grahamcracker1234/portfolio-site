@@ -15,14 +15,14 @@ export default function About() {
           <Image src="/images/profile.png" alt="profile picture" fill={true} sizes="(min-width: 1536px) 324px, (min-width: 1280px) 270px, (min-width: 1024px) 234px, (min-width: 768px) 288px, (min-width: 640px) 288px, (min-width: 475px) 288px, 100vw" style={{clipPath: "url(#squircle)"}} ></Image>
           <svg height="0" width="0" version="1.1" xmlns="http://www.w3.org/2000/svg">
             <defs>
-            <clipPath id="squircle" clipPathUnits="objectBoundingBox">
-              <path d="
+              <clipPath id="squircle" clipPathUnits="objectBoundingBox">
+                <path d="
                 M 0, 0.5
                 C 0, 0 0, 0 0.5, 0
                 S 1, 0 1, 0.5
                   1, 1 0.5, 1
                   0, 1 0, 0.5"></path>
-            </clipPath>
+              </clipPath>
             </defs>
           </svg>
         </div>

@@ -6,20 +6,20 @@ import Link from "next/link";
 
 function Project({ name, description, technologies, imageSrc, links, flip }) {
   return (
-    <div className="relative grid-cols-5 overflow-hidden rounded-lg py-12 px-8 xl:grid xl:items-center xl:overflow-visible xl:rounded-none xl:px-0">
+    <div className="relative grid-cols-5 overflow-hidden rounded-lg px-8 py-12 xl:grid xl:items-center xl:overflow-visible xl:rounded-none xl:px-0">
       <Image src={imageSrc} alt={name} fill={true} sizes="(min-width: 1536px) 561.6px, (min-width: 1280px) 410.4px, (min-width: 1024px) 576px, (min-width: 768px) 432px, (min-width: 640px) 432px, (min-width: 475px) 100vw, 100vw" className={`transition-[filter_200ms_linear] xl:aspect-[2/1] xl:h-[75%] xl:rounded-lg ${flip ? "xl:col-start-3 xl:col-end-6" : "xl:col-start-1 xl:col-end-4"} h-full w-full object-cover blur-md brightness-50 xl:!relative xl:row-start-1 xl:blur-none`}></Image>
       <div className={`xl:py-8 ${flip ? "xl:col-start-1 xl:col-end-4" : "xl:col-start-3 xl:col-end-6"} relative text-gray xl:row-start-1`}>
         <h3 className={`xl:text-gray ${!flip && "xl:text-right"} mb-2 text-2xl font-bold text-white drop-shadow-[0_0_1rem_rgba(0,0,0,1)] lg:mb-4 xl:text-3xl xl:drop-shadow-[0_0_1rem_rgba(0,0,0,0.1)]`}>{name}</h3>
         <p className={`transition-[filter_200ms_linear] xl:rounded xl:p-4 ${!flip && "xl:text-right"} text-sm leading-5 drop-shadow-[0_0_1rem_rgba(0,0,0,1)] xl:bg-evening xl:drop-shadow-[0_0_1rem_rgba(0,0,0,0.1)] xl:hover:drop-shadow-[0_0.5rem_1rem_rgba(0,0,0,0.5)]`}>{description}</p>
         <div className={`${!flip && "xl:flex-row-reverse"} mt-4 flex flex-wrap gap-2 text-xs md:text-sm`}>{technologies.map(t => 
-          <span className="rounded bg-midnight py-2 px-4 drop-shadow-[0_0_1rem_rgba(0,0,0,1)] transition-[filter_200ms_linear] before:mr-1 before:text-dark-gray before:content-['#'] xl:bg-evening xl:drop-shadow-[0_0_1rem_rgba(0,0,0,0.1)] xl:hover:drop-shadow-[0_0.5rem_1rem_rgba(0,0,0,0.5)]" key={t}>{t}</span>
+          <span className="rounded bg-midnight px-4 py-2 drop-shadow-[0_0_1rem_rgba(0,0,0,1)] transition-[filter_200ms_linear] before:mr-1 before:text-dark-gray before:content-['#'] xl:bg-evening xl:drop-shadow-[0_0_1rem_rgba(0,0,0,0.1)] xl:hover:drop-shadow-[0_0.5rem_1rem_rgba(0,0,0,0.5)]" key={t}>{t}</span>
         )}</div>
         {links && <div className={`${!flip && "xl:flex-row-reverse"} mt-4 flex flex-wrap gap-2`}>{links.map(({ Icon, href, name }) => 
           <Link className="drop-shadow-[0_0_1rem_rgba(0,0,0,1)] transition-[filter_200ms_linear] hover:text-white xl:drop-shadow-[0_0_1rem_rgba(0,0,0,0.1)] xl:hover:drop-shadow-[0_0.5rem_1rem_rgba(0,0,0,0.5)]" key={name} href={href} target="_blank" rel="noopener noreferrer"><Icon></Icon></Link>
         )}</div>}
       </div>
     </div>
-  )
+  );
 }
 
 export default function Projects() {
@@ -35,5 +35,5 @@ export default function Projects() {
         </Button>
       </div>
     </Section>
-  )
+  );
 }

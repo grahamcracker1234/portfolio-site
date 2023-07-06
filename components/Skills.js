@@ -14,11 +14,11 @@ function SkillLine({ skills, flip, duration, durationFactor }) {
 
   return (
     <div style={{
-        "--duration": `${Math.round(durationInSeconds * (durationFactor || 1))}s`,
-        "--direction": flip ? "reverse" : "normal"
-      }} className={`${styles.loop} relative mt-4 flex w-max text-xs md:text-sm`}>{skills.concat(skills).map((skill, i) => 
-      <span className="mr-4 h-min rounded bg-evening py-2 px-4 text-gray drop-shadow-[0_0_1rem_rgba(0,0,0,0.15)] transition-[filter_200ms_linear] before:mr-1 before:text-dark-gray before:content-['#'] hover:drop-shadow-[0_0.5rem_1rem_rgba(0,0,0,1)]" key={`${skill}-${i}`}>{skill}</span>
-    )}</div>
+      "--duration": `${Math.round(durationInSeconds * (durationFactor || 1))}s`,
+      "--direction": flip ? "reverse" : "normal"
+    }} className={`${styles.loop} relative mt-4 flex w-max text-xs md:text-sm`}>{skills.concat(skills).map((skill, i) => 
+        <span className="mr-4 h-min rounded bg-evening px-4 py-2 text-gray drop-shadow-[0_0_1rem_rgba(0,0,0,0.15)] transition-[filter_200ms_linear] before:mr-1 before:text-dark-gray before:content-['#'] hover:drop-shadow-[0_0.5rem_1rem_rgba(0,0,0,1)]" key={`${skill}-${i}`}>{skill}</span>
+      )}</div>
   );
 }
 

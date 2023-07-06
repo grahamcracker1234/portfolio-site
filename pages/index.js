@@ -50,5 +50,5 @@ export default function Home({ skills, rows, durationFactors }) {
         <Footer/>
       </main>
     </>
-  )
+  );
 }

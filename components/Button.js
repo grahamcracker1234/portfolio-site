@@ -4,7 +4,7 @@ const roboto = Roboto_Condensed({ subsets: ["latin"], weight: "400" });
 export default function Button({ children, className, href, ...props }) {
   return (
     <a href={href} {...props}>
-      <button className={`${className} ${roboto.className} mr-auto mb-10 rounded border-2 py-2 px-4 uppercase text-gray hover:text-white`}>{children}</button>
+      <button className={`${className} ${roboto.className} mb-10 mr-auto rounded border-2 px-4 py-2 uppercase text-gray hover:text-white`}>{children}</button>
     </a>
   );
 }
