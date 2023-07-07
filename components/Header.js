@@ -1,7 +1,7 @@
-import utilsStyles from "../styles/utils.module.scss";
 import * as Icon from "react-feather";
-import getAge from "../lib/getAge";
-import Button from "./Button";
+import utilsStyles from "@/styles/utils.module.scss";
+import getAge from "@/lib/getAge";
+import Button from "@/components/Button";
 
 export default function Header() {
   return (

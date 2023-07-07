@@ -1,8 +1,8 @@
 import Head from "next/head";
-import SideBars from "../components/SideBars";
-import Footer from "../components/Footer";
+import SideBars from "@/components/SideBars";
+import Footer from "@/components/Footer";
+import getAge from "@/lib/getAge";
 import React, { useState } from "react";
-import getAge from "../lib/getAge";
 
 export default function Archive() {
   const [menuIsActive, setMenuIsActive] = useState(false);

@@ -1,8 +1,8 @@
 import Head from "next/head";
-import Footer from "../../components/Footer";
-import getAge from "../../lib/getAge";
-import utilsStyles from "../../styles/utils.module.scss";
-import { getSortedPostsData } from "../../lib/blog";
+import Footer from "@/components/Footer";
+import getAge from "@/lib/getAge";
+import utilsStyles from "@/styles/utils.module.scss";
+import { getSortedPostsData } from "@/lib/blog";
 
 export async function getStaticProps() {
   const allPostsData = await getSortedPostsData();

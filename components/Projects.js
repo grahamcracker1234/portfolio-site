@@ -1,8 +1,8 @@
-import Section from "./Section";
 import * as Icon from "react-feather";
-import Button from "./Button";
 import Image from "next/image";
 import Link from "next/link";
+import Section from "@/components/Section";
+import Button from "@/components/Button";
 
 function Project({ name, description, technologies, imageSrc, links, flip }) {
   return (
@@ -15,7 +15,9 @@ function Project({ name, description, technologies, imageSrc, links, flip }) {
           <span className="rounded bg-midnight px-4 py-2 drop-shadow-[0_0_1rem_rgba(0,0,0,1)] transition-[filter_200ms_linear] before:mr-1 before:text-dark-gray before:content-['#'] xl:bg-evening xl:drop-shadow-[0_0_1rem_rgba(0,0,0,0.1)] xl:hover:drop-shadow-[0_0.5rem_1rem_rgba(0,0,0,0.5)]" key={t}>{t}</span>
         )}</div>
         {links && <div className={`${!flip && "xl:flex-row-reverse"} mt-4 flex flex-wrap gap-2`}>{links.map(({ Icon, href, name }) => 
-          <Link className="drop-shadow-[0_0_1rem_rgba(0,0,0,1)] transition-[filter_200ms_linear] hover:text-white xl:drop-shadow-[0_0_1rem_rgba(0,0,0,0.1)] xl:hover:drop-shadow-[0_0.5rem_1rem_rgba(0,0,0,0.5)]" key={name} href={href} target="_blank" rel="noopener noreferrer"><Icon></Icon></Link>
+          <Link className="drop-shadow-[0_0_1rem_rgba(0,0,0,1)] transition-[filter_200ms_linear] hover:text-white xl:drop-shadow-[0_0_1rem_rgba(0,0,0,0.1)] xl:hover:drop-shadow-[0_0.5rem_1rem_rgba(0,0,0,0.5)]" key={name} href={href} target="_blank" rel="noopener noreferrer">
+            <Icon></Icon>
+          </Link>
         )}</div>}
       </div>
     </div>
@@ -26,9 +28,48 @@ export default function Projects() {
   return (
     <Section id="projects" header="Featured projects 📁">
       <div className="flex flex-col items-center gap-8">
-        <Project name="Multidimensional Renderer" description="A simple computer graphics renderer to visualize any higher spatial dimension with an n-dimensional hypercube rotating about all possible degrees-of-freedom." technologies={["HTML", "CSS", "JavaScript", "Canvas", "Open-Source"]} imageSrc="/images/renderer.png" links={[{Icon: Icon.GitHub, href: "https://github.com/grahamcracker1234/multidimensional-renderer", name: "GitHub"}, {Icon: Icon.ExternalLink, href: "https://grahamcracker1234.github.io/multidimensional-renderer/", name: "Demo"}]}/>
-        <Project name="ColorBlox!" description="A puzzle-esque, arcade-style game requiring high-speed pattern recognition. Try my free mobile game on the iOS App Store, featuring two different game modes each with three difficulties and global leaderboards." technologies={["Swift", "iOS", "SpriteKit"]} imageSrc="/images/colorblox.png" links={[{Icon: Icon.ExternalLink, href: "https://apps.apple.com/us/app/colorblox/id1265656307", name: "App Store"}]} flip={true}/>
-        <Project name="Portfolio Site" description="This website, which you are currently viewing, acts as a digital portfolio and an archive for all my projects. It is open sourced, so feel free to look at it on GitHub." technologies={["HTML", "CSS", "JavaScript", "React", "Next.js", "Tailwind", "Vercel", "Open-Source"]} imageSrc="/images/portfolio-site.png" links={[{Icon: Icon.GitHub, href: "https://github.com/grahamcracker1234/portfolio-site", name: "GitHub"}]}/>
+        <Project 
+          name="Multidimensional Renderer" 
+          description="A simple computer graphics renderer to visualize any higher spatial dimension with an n-dimensional hypercube rotating about all possible degrees-of-freedom." 
+          technologies={["HTML", "CSS", "JavaScript", "Canvas", "Open-Source"]} 
+          imageSrc="/images/renderer.png" 
+          links={[
+            {
+              Icon: Icon.GitHub, 
+              href: "https://github.com/grahamcracker1234/multidimensional-renderer", 
+              name: "GitHub"
+            }, 
+            {
+              Icon: Icon.ExternalLink, 
+              href: "https://grahamcracker1234.github.io/multidimensional-renderer/", 
+              name: "Demo"
+            }
+          ]} />
+        <Project 
+          name="ColorBlox!" 
+          description="A puzzle-esque, arcade-style game requiring high-speed pattern recognition. Try my free mobile game on the iOS App Store, featuring two different game modes each with three difficulties and global leaderboards." 
+          technologies={["Swift", "iOS", "SpriteKit"]} 
+          imageSrc="/images/colorblox.png" 
+          links={[
+            {
+              Icon: Icon.ExternalLink, 
+              href: "https://apps.apple.com/us/app/colorblox/id1265656307", 
+              name: "App Store"
+            }
+          ]} 
+          flip={true} />
+        <Project 
+          name="Portfolio Site" 
+          description="This website, which you are currently viewing, acts as a digital portfolio and an archive for all my projects. It is open sourced, so feel free to look at it on GitHub." 
+          technologies={["HTML", "CSS", "JavaScript", "React", "Next.js", "Tailwind", "Vercel", "Open-Source"]} 
+          imageSrc="/images/portfolio-site.png" 
+          links={[
+            {
+              Icon: Icon.GitHub,
+              href: "https://github.com/grahamcracker1234/portfolio-site", 
+              name: "GitHub"
+            }
+          ]} />
         <Button href="https://github.com/grahamcracker1234?tab=repositories" target="_blank" rel="noopener noreferrer" className="mx-auto flex flex-row gap-2">
           <Icon.ExternalLink/>
           <span>More Projects</span>

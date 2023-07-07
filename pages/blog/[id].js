@@ -1,27 +1,20 @@
-import { getAllPostIds, getPostData, formatPostData } from "../../lib/blog";
 import Head from "next/head";
-import utilsStyles from "../../styles/utils.module.scss";
-import Footer from "../../components/Footer";
+import { getAllPostIds, getPostData, formatPostData } from "@/lib/blog";
+import utilsStyles from "@/styles/utils.module.scss";
+import Footer from "@/components/Footer";
+import styles from "@/styles/BlogPost.module.scss";
 import "katex/dist/katex.css";
 import "prismjs/themes/prism-tomorrow.css";
 import "prismjs/plugins/line-numbers/prism-line-numbers.css";
-import styles from "../../styles/BlogPost.module.scss";
 
 export async function getStaticProps({ params }) {
   const postData = formatPostData(await getPostData(params.id));
-  return {
-    props: {
-      postData,
-    },
-  };
+  return { props: { postData } };
 }
 
 export async function getStaticPaths() {
   const paths = getAllPostIds();
-  return {
-    paths,
-    fallback: false,
-  };
+  return { paths, fallback: false };
 }
 
 export default function BlogPost({ postData }) {

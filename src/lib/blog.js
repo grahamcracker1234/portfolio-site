@@ -9,7 +9,7 @@ import rehypeKatex from "rehype-katex";
 import remarkPrism from "remark-prism";
 import rehypeStringify from "rehype-stringify";
 
-const postsDirectory = path.join(process.cwd(), "blog");
+const postsDirectory = path.join(process.cwd(), "src/blog");
 
 function getId(fileName) {
   // Remove ".md" from file name to get id
@@ -70,9 +70,6 @@ export function formatPostData(data) {
 export function getAllPostIds() {
   const fileNames = fs.readdirSync(postsDirectory);
   return fileNames.map(fileName => ({
-    params: {
-      id: getId(fileName),
-    },
-  })
-  );
+    params: { id: getId(fileName) },
+  }));
 }

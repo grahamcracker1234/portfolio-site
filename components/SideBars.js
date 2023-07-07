@@ -1,4 +1,4 @@
-import styles from "./SideBars.module.scss";
+import styles from "@/components/SideBars.module.scss";
 import * as Icon from "react-feather";
 import Link from "next/link";
 

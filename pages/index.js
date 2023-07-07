@@ -1,12 +1,12 @@
 import Head from "next/head";
-import SideBars from "../components/SideBars";
-import Header from "../components/Header";
-import About from "../components/About";
-import Projects from "../components/Projects";
-import Contact from "../components/Contact";
-import Footer from "../components/Footer";
-import Skills from "../components/Skills";
-import getAge from "../lib/getAge";
+import SideBars from "@/components/SideBars";
+import Header from "@/components/Header";
+import About from "@/components/About";
+import Projects from "@/components/Projects";
+import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
+import Skills from "@/components/Skills";
+import getAge from "@/lib/getAge";
 import React, { useState } from "react";
 
 function randomNumber(min, max) {

@@ -1,5 +1,5 @@
-import styles from "./Skills.module.scss";
-import Section from "./Section";
+import styles from "@/components/Skills.module.scss";
+import Section from "@/components/Section";
 
 function chunk(array, limit) {
   const numChunks = Math.ceil(array.length / limit);
@@ -22,7 +22,7 @@ function SkillLine({ skills, flip, duration, durationFactor }) {
   );
 }
 
-export default function Skills({ rows, skills, durationFactors }) {
+export default function Skills({ skills, rows, durationFactors }) {
   const maxChunkSize = Math.ceil(skills.length / rows);
   const chunks = chunk(skills, maxChunkSize);
 

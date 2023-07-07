@@ -1,6 +1,6 @@
-import Section from "./Section";
 import Image from "next/image";
-import getAge from "../lib/getAge";
+import Section from "@/components/Section";
+import getAge from "@/lib/getAge";
 
 export default function About() {
   return (
