@@ -1,12 +1,14 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import { unified } from "unified";
-import remarkParse from "remark-parse";
+// import { unified } from "unified";
+// import remarkParse from "remark-parse";
+import { remark } from "remark";
 import remarkMath from "remark-math";
+// import remarkPrism from "remark-prism";
 import remarkRehype from "remark-rehype";
 import rehypeKatex from "rehype-katex";
-import remarkPrism from "remark-prism";
+import rehypeHighlight from "rehype-highlight";
 import rehypeStringify from "rehype-stringify";
 
 const postsDirectory = path.join(process.cwd(), "src/blog");
@@ -36,17 +38,26 @@ export async function getPostData(id) {
   const matterResult = matter(fileContents);
 
   // Use remark to convert markdown with math into HTML string
-  const processedContent = await unified()
-    .use(remarkParse)
-    .use(remarkPrism, {
-      plugins: ["line-numbers"]
-    })
+  const processedContent = await remark()
     .use(remarkMath)
+    // .use(remarkPrism, { plugins: ["line-numbers"] })
     .use(remarkRehype)
     .use(rehypeKatex)
+    .use(rehypeHighlight)
     .use(rehypeStringify)
     .process(matterResult.content);
   const contentHtml = processedContent.toString();
+
+  // const processedContent = await unified()
+  //   .use(remarkParse)
+  //   .use(remarkStr)
+  //   // .use(remarkPrism, { plugins: ["line-numbers"] })
+  //   .use(remarkMath)
+  //   .use(remarkRehype)
+  //   .use(rehypeKatex)
+  //   .use(rehypeStringify)
+  //   .process(matterResult.content);
+  // const contentHtml = processedContent.toString();
 
   // Combine the data with the id and contentHtml
   const data = {
@@ -69,7 +80,5 @@ export function formatPostData(data) {
 
 export function getAllPostIds() {
   const fileNames = fs.readdirSync(postsDirectory);
-  return fileNames.map(fileName => ({
-    params: { id: getId(fileName) },
-  }));
+  return fileNames.map(fileName => ({ id: getId(fileName) }));
 }

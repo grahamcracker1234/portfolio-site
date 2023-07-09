@@ -24,7 +24,7 @@ const [a, b] = returnedList;
 console.log(b);
 ```
 
-```rust[class="line-numbers"]
+```rust
 // Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 fn main() {
     // A counter variable

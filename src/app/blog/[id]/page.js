@@ -1,28 +1,24 @@
-import Head from "next/head";
 import { getAllPostIds, getPostData, formatPostData } from "@/lib/blog";
 import utilsStyles from "@/styles/utils.module.scss";
 import Footer from "@/components/Footer";
 import styles from "@/styles/BlogPost.module.scss";
 import "katex/dist/katex.css";
-import "prismjs/themes/prism-tomorrow.css";
-import "prismjs/plugins/line-numbers/prism-line-numbers.css";
 
-export async function getStaticProps({ params }) {
+// import "highlight.js/styles/github.css";
+import "highlight.js/styles/atom-one-dark.css";
+
+// import "prismjs/themes/prism-tomorrow.css";
+// import "prismjs/plugins/line-numbers/prism-line-numbers.css";
+
+export async function generateStaticParams() {
+  const params = getAllPostIds();
+  return params;
+}
+
+export default async function BlogPost({ params }) {
   const postData = formatPostData(await getPostData(params.id));
-  return { props: { postData } };
-}
-
-export async function getStaticPaths() {
-  const paths = getAllPostIds();
-  return { paths, fallback: false };
-}
-
-export default function BlogPost({ postData }) {
   return (
     <>
-      <Head>
-        <title>{ postData.urlTitle ?? postData.title }</title>
-      </Head>
       <article className={`${styles.article} mx-auto mb-20 flex w-full max-w-sm flex-col justify-center p-8 xs:max-w-md sm:max-w-lg lg:max-w-xl xl:max-w-2xl 2xl:max-w-4xl`}>
         <h1 className="mt-10 text-3xl font-bold text-white lg:text-5xl">{ postData.title }</h1>
         <h3 className="mb-4 text-sm font-bold text-gray lg:text-lg">{ postData.date }</h3>

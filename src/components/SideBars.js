@@ -1,8 +1,13 @@
+"use client";
+
 import styles from "@/components/SideBars.module.scss";
 import * as Icon from "react-feather";
 import Link from "next/link";
+import { useState } from "react";
 
-export default function SideBars({ state: [menuIsActive, setMenuIsActive] }) {
+export default function SideBars() {
+  const [menuIsActive, setMenuIsActive] = useState(false);
+
   const menuClick = () => setMenuIsActive(true);
   const menuExit = () => setMenuIsActive(false);
 
@@ -11,7 +16,7 @@ export default function SideBars({ state: [menuIsActive, setMenuIsActive] }) {
       <button onClick={menuClick} className="fixed right-0 top-0 z-20 m-6 rounded bg-evening p-2 text-gray drop-shadow-[0_0.1rem_0.1rem_rgba(0,0,0,0.75)] hover:text-white md:pointer-events-none md:hidden">
         <Icon.Menu/>
       </button>
-      <div onClick={menuExit} className={`${menuIsActive ? "pointer-events-auto opacity-20" : "pointer-events-none opacity-0"} fixed inset-0 z-10 bg-black transition-opacity`}></div>
+      <div onClick={menuExit} className={`${menuIsActive ? "pointer-events-auto bg-black/20 backdrop-blur-md" : "pointer-events-none bg-transparent backdrop-blur-none"} fixed inset-0 z-10 transition-[backdrop,background]`}></div>
       <div className={`${menuIsActive ? "transform-none drop-shadow-[0.5rem_0_1rem_rgba(0,0,0,1)]" : "translate-x-[100%] transform-gpu"} fixed inset-y-0 right-0 z-20 w-48 bg-midnight transition-[transform,filter] md:pointer-events-none md:hidden `}>
         <button onClick={menuExit} className="relative left-0 top-0 m-4 rounded text-gray drop-shadow-[0_0.1rem_0.1rem_rgba(0,0,0,0.75)] hover:text-white">
           <Icon.X/>
