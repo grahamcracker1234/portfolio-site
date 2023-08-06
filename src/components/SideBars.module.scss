@@ -1,4 +1,4 @@
-@use "../styles/utils.module";
+@use "@/styles/utils.module";
 
 .bar {
   @apply flex flex-col absolute bottom-20 top-20 text-gray invisible items-center;
