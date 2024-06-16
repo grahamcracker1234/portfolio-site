@@ -17,7 +17,7 @@ export default function SideBars() {
         <Icon.Menu/>
       </button>
       <div onClick={menuExit} className={`${menuIsActive ? "pointer-events-auto bg-black/20 backdrop-blur-md" : "pointer-events-none bg-transparent backdrop-blur-none"} fixed inset-0 z-10 transition-[backdrop,background]`}></div>
-      <div className={`${menuIsActive ? "transform-none drop-shadow-[0.5rem_0_1rem_rgba(0,0,0,1)]" : "translate-x-[100%] transform-gpu"} fixed inset-y-0 right-0 z-20 w-48 bg-midnight transition-[transform,filter] md:pointer-events-none md:hidden `}>
+      <div className={`${menuIsActive ? "transform-none drop-shadow-[0.5rem_0_1rem_rgba(0,0,0,1)]" : "translate-x-full transform-gpu"} fixed inset-y-0 right-0 z-20 w-48 bg-midnight transition-[transform,filter] md:pointer-events-none md:hidden `}>
         <button onClick={menuExit} className="relative left-0 top-0 m-4 rounded text-gray drop-shadow-[0_0.1rem_0.1rem_rgba(0,0,0,0.75)] hover:text-white">
           <Icon.X/>
         </button>

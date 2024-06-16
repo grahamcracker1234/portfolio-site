@@ -30,7 +30,7 @@ export default async function Skills() {
 
   return (
     <Section id="skills" header="My skills 🛠️">
-      <div className="relative mx-[-2rem] overflow-x-hidden">
+      <div className="relative -mx-8 overflow-x-hidden">
         {chunks.map((skills, i) =>
           <SkillLine key={i} skills={skills} durationFactor={durationFactors[i]} flip={i % 2}/>
         )}

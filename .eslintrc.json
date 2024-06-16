@@ -8,8 +8,8 @@
     "es6": true
   },
   "rules": {
-    "semi": "error",
-    "indent": [
+    "@stylistic/semi": "error",
+    "@stylistic/indent": [
       "error",
       2
     ],
@@ -19,7 +19,7 @@
         "argsIgnorePattern": "^_"
       }
     ],
-    "quotes": [
+    "@stylistic/quotes": [
       "error",
       "double",
       {
@@ -29,6 +29,7 @@
     ]
   },
   "plugins": [
+    "@stylistic",
     "tailwindcss"
   ]
 }
