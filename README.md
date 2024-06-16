@@ -5,6 +5,7 @@
 This is my personal site, [grahamcracker.dev](https://www.grahamcracker.dev), which acts as a digital portfolio and an archive for all my projects.
 
 ## Technologies
+
 * HTML: markup language
 * CSS: markup styling
 * JavaScript: programming language

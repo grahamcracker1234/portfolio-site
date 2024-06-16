@@ -7,7 +7,7 @@ import Button from "@/components/Button";
 function Project({ name, description, technologies, imageSrc, links, flip }) {
   return (
     <div className="relative grid-cols-5 overflow-hidden rounded-lg px-8 py-12 xl:grid xl:items-center xl:overflow-visible xl:rounded-none xl:px-0">
-      <Image src={imageSrc} alt={name} fill={true} sizes="(min-width: 1536px) 561.6px, (min-width: 1280px) 410.4px, (min-width: 1024px) 576px, (min-width: 768px) 432px, (min-width: 640px) 432px, (min-width: 475px) 100vw, 100vw" className={`transition-[filter_200ms_linear] xl:aspect-[2/1] xl:h-[75%] xl:rounded-lg ${flip ? "xl:col-start-3 xl:col-end-6" : "xl:col-start-1 xl:col-end-4"} h-full w-full object-cover blur-md brightness-50 xl:!relative xl:row-start-1 xl:blur-none`}></Image>
+      <Image src={imageSrc} alt={name} fill={true} sizes="(min-width: 1536px) 561.6px, (min-width: 1280px) 410.4px, (min-width: 1024px) 576px, (min-width: 768px) 432px, (min-width: 640px) 432px, (min-width: 475px) 100vw, 100vw" className={`transition-[filter_200ms_linear] xl:aspect-[2/1] xl:h-3/4 xl:rounded-lg ${flip ? "xl:col-start-3 xl:col-end-6" : "xl:col-start-1 xl:col-end-4"} size-full object-cover blur-md brightness-50 xl:!relative xl:row-start-1 xl:blur-none`}></Image>
       <div className={`xl:py-8 ${flip ? "xl:col-start-1 xl:col-end-4" : "xl:col-start-3 xl:col-end-6"} relative text-gray xl:row-start-1`}>
         <h3 className={`xl:text-gray ${!flip && "xl:text-right"} mb-2 text-2xl font-bold text-white drop-shadow-[0_0_1rem_rgba(0,0,0,1)] lg:mb-4 xl:text-3xl xl:drop-shadow-[0_0_1rem_rgba(0,0,0,0.1)]`}>{name}</h3>
         <p className={`transition-[filter_200ms_linear] xl:rounded xl:p-4 ${!flip && "xl:text-right"} text-sm leading-5 drop-shadow-[0_0_1rem_rgba(0,0,0,1)] xl:bg-evening xl:drop-shadow-[0_0_1rem_rgba(0,0,0,0.1)] xl:hover:drop-shadow-[0_0.5rem_1rem_rgba(0,0,0,0.5)]`}>{description}</p>
@@ -61,7 +61,7 @@ export default function Projects() {
         <Project 
           name="Portfolio Site" 
           description="This website, which you are currently viewing, acts as a digital portfolio and an archive for all my projects. It is open sourced, so feel free to look at it on GitHub." 
-          technologies={["HTML", "CSS", "JavaScript", "React", "Next.js", "Tailwind", "Vercel", "Open-Source"]} 
+          technologies={["HTML", "CSS", "JavaScript", "React", "Next", "Tailwind", "Vercel", "Open-Source"]} 
           imageSrc="/images/portfolio-site.png" 
           links={[
             {
@@ -70,6 +70,19 @@ export default function Projects() {
               name: "GitHub"
             }
           ]} />
+        <Project 
+          name="Pixel3D" 
+          description="A custom render pipeline for Unity to support custom render pipeline for Unity that aims to provide a simple and efficient way to render pixel art in 3D."
+          technologies={["Unity", "HLSL", "C#", "Open-Source"]} 
+          imageSrc="/images/pixel-3d.png" 
+          links={[
+            {
+              Icon: Icon.GitHub, 
+              href: "https://github.com/grahamcracker1234/pixel-3d", 
+              name: "GitHub"
+            }
+          ]}
+          flip={true} />
         <Button href="https://github.com/grahamcracker1234?tab=repositories" target="_blank" rel="noopener noreferrer" className="mx-auto flex flex-row gap-2">
           <Icon.ExternalLink/>
           <span>More Projects</span>
