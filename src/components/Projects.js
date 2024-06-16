@@ -61,7 +61,7 @@ export default function Projects() {
         <Project 
           name="Portfolio Site" 
           description="This website, which you are currently viewing, acts as a digital portfolio and an archive for all my projects. It is open sourced, so feel free to look at it on GitHub." 
-          technologies={["HTML", "CSS", "JavaScript", "React", "Next.js", "Tailwind", "Vercel", "Open-Source"]} 
+          technologies={["HTML", "CSS", "JavaScript", "React", "Next", "Tailwind", "Vercel", "Open-Source"]} 
           imageSrc="/images/portfolio-site.png" 
           links={[
             {
@@ -70,6 +70,19 @@ export default function Projects() {
               name: "GitHub"
             }
           ]} />
+        <Project 
+          name="Pixel3D" 
+          description="A custom render pipeline for Unity to support custom render pipeline for Unity that aims to provide a simple and efficient way to render pixel art in 3D."
+          technologies={["Unity", "HLSL", "C#", "Open-Source"]} 
+          imageSrc="/images/pixel-3d.png" 
+          links={[
+            {
+              Icon: Icon.GitHub, 
+              href: "https://github.com/grahamcracker1234/pixel-3d", 
+              name: "GitHub"
+            }
+          ]}
+          flip={true} />
         <Button href="https://github.com/grahamcracker1234?tab=repositories" target="_blank" rel="noopener noreferrer" className="mx-auto flex flex-row gap-2">
           <Icon.ExternalLink/>
           <span>More Projects</span>

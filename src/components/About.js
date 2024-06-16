@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Section from "@/components/Section";
-import getAge from "@/lib/getAge";
 
 export default function About() {
   return (
@@ -8,7 +7,7 @@ export default function About() {
       <div className="flex flex-col items-center gap-8 lg:flex-row lg:gap-4 xl:gap-8">
         <p className="text-xs leading-5 text-gray xl:text-sm xl:leading-6 2xl:text-base 2xl:leading-7">
           <span className="mb-4 block">Hello, stranger! My humble beginnings to programming began in 2013 with the high-level block-based visual programming language, <b>Scratch</b>. Eventually, after becoming quite popular on Scratch, I decided to move onto a <em>real</em> textual language and began learning <b>JavaScript</b> on <b>Khan Academy</b>.</span>
-          <span className="mb-4 block">Ever since then, I have been obsessed with computers, technology, and programming. Fast-forward to today, I have <b>{getAge("2013-07-01")} years</b> of personal experience, and, in the pursuit of knowledge, I am attending <b>Mount St. Mary&apos;s University</b> majoring in Computer Science, Mathematics, Data Science, Cybersecurity, and French.</span>
+          <span className="mb-4 block">Ever since then, I have been obsessed with computers, technology, and programming. Fast-forward to today, I have <b>over a decade</b> of personal experience, and, in the pursuit of knowledge, I graduated summa cum laude from <b>Mount St. Mary&apos;s University</b> with a Bachelor of Science in Computer Science, Mathematics, Data Science, Cybersecurity, and French.</span>
           <span className="block">My main focus these days is building fun, interesting products and digital experiences for everyone to enjoy.</span>
         </p>
         <div className={`relative aspect-square size-64 transition-[filter] ease-out hover:drop-shadow-[0_0.5rem_1rem_rgba(0,0,0,0.5)] lg:size-52 xl:size-60 2xl:size-72`}>
