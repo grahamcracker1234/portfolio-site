@@ -72,7 +72,7 @@ export default function Projects() {
           ]} />
         <Project 
           name="Pixel3D" 
-          description="A custom render pipeline for Unity that aims to provide a simple and efficient way to render pixel art in realtime-3D."
+          description="A custom render pipeline for Unity that aims to provide a simple and efficient way to render pixel art in real-time 3D."
           technologies={["Unity", "HLSL", "C#", "Open-Source"]} 
           imageSrc="/images/pixel-3d.png" 
           links={[
